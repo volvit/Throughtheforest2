@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:text="Меню"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/Orange"
+        android:background="@color/Gray"
+        android:id="@+id/buttonMenu" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Лес"
+        android:textSize="30dp"
+        android:textColor="@color/Orange"
+        android:background="@color/Gray"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:background="@drawable/path_day"
+        android:layout_height="240dp"
+
+        />
+
+    <TextView
+        android:text="@string/Text"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:textColor="@color/Orange"
+        android:background="@color/Gray"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="51dp">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Gray"
+            android:progressTint="@color/Orange"
+            android:progress="49"
+            android:progressBackgroundTint="@color/Brown"
+            android:id="@+id/progressBarStamina"
+            android:layout_alignLeft="@+id/progressBarWarmth"
+            android:layout_alignStart="@+id/progressBarWarmth" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/stamina"
+            android:layout_toLeftOf="@+id/progressBarStamina"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Gray"
+            android:progress="50"
+            android:progressBackgroundTint="@color/Brown"
+            android:progressTint="@color/Orange"
+            android:id="@+id/progressBarWarmth"
+            android:layout_below="@+id/progressBarStamina"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Gray"
+            android:progress="51"
+            android:progressBackgroundTint="@color/Brown"
+            android:progressTint="@color/Orange"
+            android:id="@+id/progressBarFood"
+            android:layout_below="@+id/progressBarWarmth"
+            android:layout_alignLeft="@+id/progressBarWarmth"
+            android:layout_alignStart="@+id/progressBarWarmth" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/food"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/progressBarStamina"
+            android:layout_toStartOf="@+id/progressBarStamina"
+            android:layout_above="@+id/progressBarFood"
+            android:layout_below="@+id/progressBarStamina" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/temperature"
+            android:layout_alignBottom="@+id/progressBarFood"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/progressBarFood"
+            android:layout_toStartOf="@+id/progressBarFood"
+            android:layout_below="@+id/progressBarWarmth" />
+    </RelativeLayout>
+</LinearLayout>

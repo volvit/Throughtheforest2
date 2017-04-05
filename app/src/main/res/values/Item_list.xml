@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <Items>
+
+        <item type = "Food" weight = "0.15" ffood = "" >Шоколад</item>
+        <item type = "Food" weight = "0.5" ffood = "" >Тушенка</item>
+        <item type = "Food" weight = "0.5" ffood = "" >Ягоды</item>
+
+        <item type = "Cloth" weight = "1" fwormth = "" >Куртка</item>
+        <item type = "Cloth" weight = "0.5" fwormth = "" >Кофта</item>
+
+        <item type = "Fire" weight = "0.01" timefire = "" >Зажигалка</item>
+        <item type = "Fire" weight = "0.3" timefire = "" >Лук</item>
+
+        <item type = "Ingrid" weight = "0.5">Палка</item>
+        <item type = "Ingrid" weight = "2">Дрова</item>
+        <item type = "Ingrid" weight = ""></item>
+
+        <item type = "Instr" weight = "1" usetime = "" >Топор</item>
+        <item type = "Instr" weight = "0.5" usetime = "" >Нож</item>
+
+        <item type = "" weight = ""></item>
+
+    </Items>
+
+    <Locations>
+        <location type = "" ingrid = "" >Лес</location>
+        <location type = "" ingrid = "" >Поле</location>
+        <location type = "" ingrid = "" >Ручей</location>
+        <location type = "" ingrid = "" >Озеро</location>
+        <location type = "" ingrid = "" >Болото</location>
+
+    </Locations>
+
+    <Ingrids>
+        <ingrid  >Ягоды</ingrid>
+        <ingrid  ></ingrid>
+        <ingrid  >Ягоды</ingrid>
+        <ingrid  >Ягоды</ingrid>
+        <ingrid  >Ягоды</ingrid>
+
+
+    </Ingrids>
+</resources>

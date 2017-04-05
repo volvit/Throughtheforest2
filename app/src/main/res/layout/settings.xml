@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Gray"
+    android:weightSum="1">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:ems="10"
+        android:background="@color/Brown"
+        android:hint="Введите ваше имя"
+        android:textColorHint="#efebeb"
+        android:id="@+id/editName"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/Gray">
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tgButtSound"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textOff="Выкл."
+            android:textOn="Вкл."
+            android:textColor="@color/Orange"
+            android:background="@color/Gray2"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="Звуки"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tVsound"
+            android:textSize="30dp"
+            android:textColor="@color/Orange"
+            android:layout_alignTop="@+id/tgButtSound"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/tgButtSound"
+            android:layout_toRightOf="@+id/imgVolume"
+            android:layout_toEndOf="@+id/imgVolume" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar2"
+            android:progressBackgroundTint="@color/Brown"
+            android:layout_marginBottom="38dp"
+            android:layout_above="@+id/tgButtSound"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tgButtMusic"
+            android:textOff="Выкл."
+            android:textOn="Вкл."
+            android:textColor="@color/Orange"
+            android:background="@color/Gray2"
+            android:layout_above="@+id/seekBar2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Сохранить"
+            android:textColor="@color/Orange"
+            android:background="@color/Gray2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/btnSaveName" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/nota"
+            android:layout_alignTop="@+id/tVMusic"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/imgSound"
+            android:background="#c1de92"
+            android:layout_alignRight="@+id/btnSaveName"
+            android:layout_alignEnd="@+id/btnSaveName"
+            android:layout_above="@+id/seekBar2" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/volume_icon"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/imgVolume"
+            android:background="#c1de92"
+            android:layout_below="@+id/seekBar2"
+            android:layout_alignRight="@+id/imgSound"
+            android:layout_alignEnd="@+id/imgSound" />
+
+        <TextView
+            android:text="Музыка"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tVMusic"
+            android:textSize="30dp"
+            android:textColor="@color/Orange"
+
+            android:layout_toRightOf="@+id/imgSound"
+            android:layout_toEndOf="@+id/imgSound"
+            android:layout_above="@+id/seekBar2"
+            android:layout_alignTop="@+id/tgButtMusic" />
+
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:progressBackgroundTint="@color/Brown"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</LinearLayout>
+
+
