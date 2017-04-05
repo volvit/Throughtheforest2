@@ -9,11 +9,20 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
+enum TypeItems{
+    Food,
+    Cloth,
+    Fire,
+    Ingrid,
+    Instr
+}
+
 public class Items  {
 
-    private String mFileName = "Items";
-    //String ItemName = " ";
-     int Weight = 0;
+
+    String ItemName = " ";  // Название элемента
+    int Weight = 0;         // Вес элемента
+    TypeItems typeItems;    // Тип элемента
 
 
 
