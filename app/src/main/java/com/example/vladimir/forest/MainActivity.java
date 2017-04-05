@@ -64,6 +64,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         });
 
+        // TODO:Нужно тут сделать чтение данных из файла и заполнение списков с элементами и локациями
+
+
     }
 
     public void onBackPressed() {
