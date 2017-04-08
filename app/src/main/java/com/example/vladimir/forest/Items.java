@@ -1,13 +1,19 @@
 package com.example.vladimir.forest;
 
 import android.app.ActionBar;
+import android.content.pm.PackageManager;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 
+import org.xmlpull.v1.XmlPullParser;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.AttributedCharacterIterator;
+import java.util.Iterator;
 
 enum TypeItems{
     Food,
@@ -17,7 +23,7 @@ enum TypeItems{
     Instr
 }
 
-public class Items  {
+public class Items {
 
 
     String ItemName = " ";  // Название элемента
@@ -26,12 +32,15 @@ public class Items  {
 
 
 
+    public Items(String name, String weight, String type){
+            ItemName = name;
+            Weight = Integer.parseInt(weight) ;
+            typeItems = TypeItems.valueOf(type) ;
 
+        }
 
 
 }
-
-
 
 /*
 

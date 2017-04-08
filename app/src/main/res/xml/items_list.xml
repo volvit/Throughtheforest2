@@ -14,7 +14,13 @@
 
         <item type = "Ingrid" weight = "0.5">Палка</item>
         <item type = "Ingrid" weight = "2">Дрова</item>
-        <item type = "Ingrid" weight = ""></item>
+        <item type = "Ingrid" weight = "1">Сырая вода</item>
+        <item type = "Ingrid" weight = "0.5">Ткань</item>
+        <item type = "Ingrid" weight = "0.5">Веревка</item>
+        <item type = "Ingrid" weight = "1">Сырая вода</item>
+
+
+
 
         <item type = "Instr" weight = "1" usetime = "" >Топор</item>
         <item type = "Instr" weight = "0.5" usetime = "" >Нож</item>
@@ -24,7 +30,7 @@
     </Items>
 
     <Locations>
-        <location type = "" ingrid = "" >Лес</location>
+        <location ingrid1 = "" ingrid2 = "" ingrid3 = "" >Лес</location>
         <location type = "" ingrid = "" >Поле</location>
         <location type = "" ingrid = "" >Ручей</location>
         <location type = "" ingrid = "" >Озеро</location>
@@ -32,13 +38,5 @@
 
     </Locations>
 
-    <Ingrids>
-        <ingrid  >Ягоды</ingrid>
-        <ingrid  ></ingrid>
-        <ingrid  >Ягоды</ingrid>
-        <ingrid  >Ягоды</ingrid>
-        <ingrid  >Ягоды</ingrid>
 
-
-    </Ingrids>
 </resources>

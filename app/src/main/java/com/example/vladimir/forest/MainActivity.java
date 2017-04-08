@@ -6,10 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-//
+
+import org.xmlpull.v1.XmlPullParser;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnExit,btnStart,btnSettings,btnAbout;
+    public ArrayList<Items> ItemsList = new ArrayList<Items>();
+    public ArrayList<Location> LocationList = new ArrayList<Location>(); //список локаций
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         // TODO:Нужно тут сделать чтение данных из файла и заполнение списков с элементами и локациями
-
+        LoadItems();
+        LoadLocations();
 
     }
 
@@ -78,4 +85,52 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
 
     }
+
+    public void LoadItems(){
+
+        try{
+            XmlPullParser parser = getResources().getXml(R.xml.items_list);
+
+
+
+            // продолжаем, пока не достигнем конца документа
+            while (parser.getEventType()!= XmlPullParser.END_DOCUMENT) {
+                if (parser.getEventType() == XmlPullParser.START_TAG
+                        && parser.getName().equals("item")) {
+                               ItemsList.add(new Items(parser.getAttributeValue(0), parser.getAttributeValue(1),
+                                       parser.getAttributeValue(2)));
+                }
+                parser.next();
+            }
+
+
+        } catch (Throwable e){
+
+        }
+    }
+
+    public void LoadLocations(){
+
+        try{
+            XmlPullParser parser = getResources().getXml(R.xml.items_list);
+
+
+            // продолжаем, пока не достигнем конца документа
+            while (parser.getEventType()!= XmlPullParser.END_DOCUMENT) {
+                if (parser.getEventType() == XmlPullParser.START_TAG
+                        && parser.getName().equals("location")) {
+                    LocationList.add(new Location(parser.getAttributeValue(0),
+                            parser.getAttributeValue(1)/*,parser.getAttributeValue(2)*/));
+                }
+                parser.next();
+            }
+
+
+        } catch (Throwable e){
+
+        }
+    }
+
+
+
 }

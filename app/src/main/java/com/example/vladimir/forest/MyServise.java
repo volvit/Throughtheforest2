@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class MyServise extends Service {
 
         private static final String TAG = "MyService";
-        MediaPlayer player;
+        public MediaPlayer player;
 
         @Override
         public IBinder onBind(Intent intent) {
@@ -23,6 +23,15 @@ public class MyServise extends Service {
 
                 player = MediaPlayer.create(this, R.raw.fearless_first);
                 player.setLooping(true); // зацикливаем
+        }
+
+
+        public void onPause(){
+                player.pause();
+        }
+
+        public void onGo(){
+                player.start();
         }
 
         @Override

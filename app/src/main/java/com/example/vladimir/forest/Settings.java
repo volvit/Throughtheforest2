@@ -1,5 +1,7 @@
 package com.example.vladimir.forest;
 
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -35,19 +37,32 @@ public class Settings extends AppCompatActivity implements View.OnClickListener,
             btnSaveName = (Button)findViewById(R.id.btnSaveName);
             btnSaveName.setOnClickListener(this);
 
+
         }
 
     @Override
     public void onClick(View view) {
+        String playername = "";
+
         Toast.makeText(this, "Сохранено", Toast.LENGTH_SHORT).show();
 
+        SharedPreferences PlayerName = getSharedPreferences("main", MODE_PRIVATE);
+        Editor editor = PlayerName.edit();
+        editor.putString("Имя игрока", playername);
 
 
+
+        tgButtMusic.setOnCheckedChangeListener(this);
     }
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
+        if (isChecked){
+            onPause();
+        }else{
+
+        }
 
 
 
